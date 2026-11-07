@@ -1,0 +1,128 @@
+.calendar-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.calendar-table th,
+.calendar-table td {
+    width: 14.28%;
+}
+
+.calendar-day {
+    vertical-align: top;
+    height: 120px;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.calendar-events {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: hidden;
+}
+
+.calendar-day .badge {
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    padding: 4px 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .calendar-table th,
+    .calendar-table td {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .calendar-day {
+        height: auto;
+        min-height: 80px;
+        padding: 4px;
+        overflow: hidden;
+    }
+
+    .calendar-day .fw-semibold {
+        font-size: 11px;
+    }
+
+    .calendar-events {
+        gap: 2px;
+        overflow: hidden;
+    }
+
+    .calendar-day .badge {
+        width: 100%;
+        font-size: 9px;
+        padding: 2px 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    #monthYear {
+        font-size: 16px;
+    }
+
+    #prevMonth,
+    #nextMonth {
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Bulatan kecil */
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+/* Warna status (kalau tidak pakai Bootstrap) */
+.bg-warning {
+    background-color: #f59e0b; /* kuning */
+}
+
+.bg-success {
+    background-color: #22c55e; /* hijau */
+}
+
+.bg-primary {
+    background-color: #3b82f6; /* biru */
+}
+
+/* Optional: biar teks sejajar rapi */
+.status-wrapper span {
+    vertical-align: middle;
+}
+
+
+#modalHeader {
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    max-width: calc(100% - 40px);
+    overflow-wrap: anywhere; /* penting untuk kata super panjang */
+}
+
+.modal-title:hover {
+    white-space: normal;
+}
+

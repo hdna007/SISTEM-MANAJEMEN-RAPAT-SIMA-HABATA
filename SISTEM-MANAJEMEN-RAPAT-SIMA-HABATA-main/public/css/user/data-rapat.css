@@ -1,0 +1,414 @@
+:root {
+    --primary-dark: #1A3636;
+    --soft-gray: #eff3f7;
+    --text-muted: #232425;
+}
+
+/* Container Card */
+.table-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Header Tabel */
+.card-header-custom {
+    padding: 25px 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-header-custom h5 {
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-table {
+    margin-bottom: 0;
+}
+
+.custom-table thead th {
+    background: var(--soft-gray);
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 18px 25px;
+    border: none;
+}
+
+.custom-table tbody td {
+    padding: 20px 25px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f8fafc;
+    color: #334155;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/*UNTUK RESPONSIVE*/
+@media (max-width: 768px) {
+
+    .custom-table thead {
+        display: none;
+    }
+
+    .custom-table tbody tr {
+        display: block;
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 18px;
+        margin-bottom: 16px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .custom-table tbody td {
+        display: block;
+        text-align: left;
+        padding: 8px 0;
+        border: none;
+        font-size: 14px;
+    }
+
+    /* Label kecil di atas isi */
+    .custom-table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #64748b;
+        margin-bottom: 4px;
+    }
+
+    /* Judul rapat jadi header utama */
+    .custom-table tbody td:first-child {
+        font-size: 16px;
+        font-weight: 700;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    /* Status kasih jarak */
+    td[data-label="Status"] {
+        margin-top: 6px;
+    }
+
+    /* Tombol detail full width */
+    td[data-label="Detail"] .btn {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    /* Aksi jadi 2 kolom */
+    td[data-label="Aksi"] {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    td[data-label="Aksi"] .btn {
+        flex: 1;
+    }
+}
+
+.custom-table tbody tr:hover {
+    background-color: #fcfdfe;
+}
+
+
+/* Base badge */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+    white-space: nowrap; /* 🔥 penting */
+}
+
+/* Pending */
+.badge-warning {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+/* Disetujui */
+.badge-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Ditolak */
+.badge-danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Dibatalkan */
+.badge-cancel {
+    background: #ffe4e6;
+    color: #9f1239;
+}
+
+/* Default */
+.badge-secondary {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.badge-primary {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
+.btn-kirim-sekretaris {
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(26, 54, 54, 0.2);
+}
+
+/* Button tambah rapat */
+/* From Uiverse.io by e-coders */ 
+#addRapat {
+ appearance: none;
+ background-color: transparent;
+ border: 0.125em solid #1A1A1A;
+ border-radius: 0.9375em;
+ box-sizing: border-box;
+ color: #3B3B3B;
+ cursor: pointer;
+ display: inline-block;
+ font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ font-size: 14px;
+ font-weight: 600;
+ line-height: normal;
+ margin: 0;
+ min-height: 2.75em;
+ min-width: 0;
+ outline: none;
+ padding: 0.6em 1.3em;
+ text-align: center;
+ text-decoration: none;
+ transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ will-change: transform;
+}
+
+#addRapat:disabled {
+ pointer-events: none;
+}
+
+#addRapat:hover {
+ color: #fff;
+ background-color: #1A1A1A;
+ box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+ transform: translateY(-2px);
+}
+
+#addRapat:active {
+ box-shadow: none;
+ transform: translateY(0);
+}
+
+#btn-detail{
+    font-size: 13px;
+}
+
+.shadow-custom {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.shadow-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-soft-white {
+    background-color: #f5f6f7 !important;
+    border: 1px solid #b0bec5 !important;
+    border-radius: 20px !important;
+    color: #000000 !important;
+}
+
+
+
+.modal-view-overlay.active .view-modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* LABEL & VALUE */
+.info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: #334155;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* TAG FASILITAS */
+.facility-tag {
+    background: #eef2ff;
+    color: #6366f1;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* BUTTON */
+.btn-save {
+    width: 48%;
+    background: #265812;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.btn-edit {
+    width: 48%;
+    background: #79b41a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+/* Base button */
+.btn-action {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Edit */
+.btn-edit-custom {
+    background: #e6f4ea;
+    color: #166534;
+}
+
+.btn-edit-custom:hover {
+    background: #166534;
+    color: white;
+}
+
+/* Cancel */
+.btn-cancel-custom {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-cancel-custom:hover {
+    background: #991b1b;
+    color: white;
+}
+
+.btn-alasan-custom{
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-alasan-custom:hover{
+    background: #991b1b;
+    color: white;
+}
+
+.judul-rapat{
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.judul-rapat:hover{
+    overflow: visible;
+    white-space: normal;
+}
+
+/* Modal Detail Rapat */
+.info-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    color: #111827;
+}
+
+.modal-header.bg-primary {
+    background-color: #243b61 !important;
+}
+
+.modal-content {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.modal-footer .btn {
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.modal-footer .btn:hover {
+    transform: translateY(-2px);
+}

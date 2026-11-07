@@ -1,0 +1,33 @@
+.footer-custom {
+    background: linear-gradient(-90deg, #0f2027, #203a43, #2c5364);
+    margin-top: auto;
+    padding: 20px 0;
+    position: relative;
+    z-index: -20;
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+}
+.text-secondary {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+.text-warning {
+    color: #ffd700 !important;
+}
+.border-secondary {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+@media (max-width: 768px) {
+    .footer-custom .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-custom .text-md-end {
+        text-align: left !important; /* Rata kiri saat di HP */
+        margin-top: 25px;
+    }
+    .footer-custom .col-md-4,
+    .footer-custom .col-md-3 {
+        width: 100%; /* Kolom jadi penuh di layar kecil */
+    }
+}

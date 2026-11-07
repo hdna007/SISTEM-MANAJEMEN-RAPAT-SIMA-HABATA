@@ -1,0 +1,258 @@
+:root {
+    --primary-dark: #1A3636;
+    --primary-pastel: #1f3f33;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --success: #d1e7dd;
+    --danger: #f8d7da;
+    --primary-green: #1A3636;
+    --pastel-green: #40534C;
+    --soft-gray: #eff3f7;
+    --danger-red: #ef4444;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container-custom {
+    max-width: 95%;
+    margin: 40px auto;
+}
+
+/* =========================
+   STAT CARD
+========================= */
+
+.stat-card {
+    border: none;
+    border-radius: 24px;
+    padding: 25px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-1 {
+    background: linear-gradient(135deg,#1A3636 0%,#40534C 100%);
+}
+
+.card-2 {
+    background: linear-gradient(135deg,#678983 0%,#40534C 100%);
+}
+
+.card-3 {
+    background: linear-gradient(135deg,#3E5641 0%,#A2AD91 100%);
+}
+
+.stat-card i {
+    position:absolute;
+    right:-10px;
+    bottom:-10px;
+    font-size:8rem;
+    opacity:.15;
+    transition:.3s;
+}
+
+.stat-card:hover i{
+    transform:scale(1.2) rotate(-10deg);
+    opacity:.25;
+}
+
+.stat-val{
+    font-size:2.5rem;
+    font-weight:700;
+}
+
+.stat-label{
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* =========================
+   TABLE CARD
+========================= */
+
+.table-card{
+    background:#ffffff;
+    border-radius:24px;
+    border:none;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,0.05);
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.card-header-custom{
+    padding:25px 30px;
+    background:#ffffff;
+    border-bottom:1px solid #f1f5f9;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.card-header-custom h5{
+    color:var(--primary-dark);
+    font-weight:700;
+    margin:0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* =========================
+   TABLE STYLE
+========================= */
+
+.custom-table{
+    margin-bottom:0;
+}
+
+.custom-table thead th{
+    background:var(--soft-gray);
+    color:#232425;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+    padding:18px 25px;
+    border:none;
+}
+
+.custom-table tbody td{
+    padding:20px 25px;
+    vertical-align:middle;
+    border-bottom:1px solid #f8fafc;
+    color:#334155;
+    font-size:14px;
+    transition:all .3s ease;
+}
+
+.custom-table tbody tr:hover{
+    background:#fcfdfe;
+}
+
+.judul-rapat{
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.judul-rapat:hover{
+    overflow: visible;
+    white-space: normal;
+}
+
+
+
+/* =========================
+   LINK PDF
+========================= */
+
+.notula-link{
+    color:var(--pastel-green);
+    text-decoration:none;
+    font-weight:600;
+    font-size: 14px;
+}
+
+/* =========================
+   BUTTON DELETE
+========================= */
+
+.btn-action {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-approve-custom {
+    background: #e6f4ea;
+    color: #166534;
+}
+
+.btn-approve-custom:hover {
+    background: #166534;
+    color: white;
+}
+
+.btn-reject-custom {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.btn-reject-custom:hover {
+    background: #721c24;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE TABLE
+========================= */
+
+@media (max-width:768px){
+
+.custom-table thead{
+    display:none;
+}
+
+.custom-table tbody tr{
+    display:block;
+    background:#ffffff;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.custom-table tbody td{
+    display:block;
+    text-align:left;
+    padding:8px 0;
+    border:none;
+}
+
+.custom-table tbody td::before{
+    content:attr(data-label);
+    display:block;
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    color:#64748b;
+    margin-bottom:4px;
+}
+
+.custom-table tbody td:first-child{
+    font-size:16px;
+    font-weight:700;
+    padding-bottom:12px;
+    margin-bottom:12px;
+    border-bottom:1px solid #f1f5f9;
+}
+
+}
